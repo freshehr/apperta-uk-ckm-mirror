@@ -1,17 +1,20 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4; uid=e22242af-593d-3765-805b-99d65b2ccef5)
 	openEHR-EHR-SECTION.medication_medical_devices_rcp.v1
 
 concept
-	[at0000]	-- Medication and medical devices
+	[at0000]
+
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
+		["date"] = <"2014-06-08">
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
-		["date"] = <"2014-06-08">
 	>
+	lifecycle_state = <"AuthorDraft">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -78,22 +81,18 @@ Record of dietary supplements, dressings and equipment that the patient is curre
 
 
 ">
-			use = <"">
-			misuse = <"">
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
 	other_details = <
 		["references"] = <"Health and Social Care Information Centre, Academy of Medical Royal Colleges (2013) Standards for the Clinical Structure and Content of Patient Records. HSCIC, Leeds.
 Available from: https://www.rcplondon.ac.uk/sites/default/files/standards-for-the-clinical-structure-and-content-of-patient-records.pdf [Accessed July 22, 2014]">
 		["MD5-CAM-1.0.1"] = <"BA8A4CAF4F969BDC67687A8EF75D3523">
+		["build_uid"] = <"0989f7ea-8ed9-30ee-83c7-f35c189d4cff">
 	>
 
 definition
-	SECTION[at0000] matches {*}
-
+	SECTION[at0000] matches {*}    -- Medication and medical devices
 
 ontology
 	term_definitions = <
