@@ -89,7 +89,7 @@
         <Rule path="/activities[at0001]/description[at0002]/items[at0129]" max="0" />
         <Rule path="/activities[at0001]/description[at0002]/items[at0167]" max="0" />
         <Rule path="/protocol[at0005]/items[at0004]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication.v0" concept_name="Medication" path="/activities[at0001]/description[at0002]/items[at0143]">
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication.v1" concept_name="Medication" path="/activities[at0001]/description[at0002]/items[at0143]">
           <Rule path="/items[at0132]" max="0" />
           <Rule path="/items[at0142]" max="0" />
           <Rule path="/items[at0152]" max="0" />
@@ -147,7 +147,7 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_order.v2">
     <digest id="MD5-CAM-1.0.1">23C66F34EE4EBC155366C66296221B99</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication.v0">
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication.v1">
     <digest id="MD5-CAM-1.0.1">4AA021E61C24455E34F3E13CEF0BB19F</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.therapeutic_direction.v1">
