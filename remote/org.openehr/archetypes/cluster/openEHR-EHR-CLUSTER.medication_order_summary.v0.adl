@@ -1,8 +1,9 @@
-﻿archetype (adl_version=1.4; uid=d8ac401c-6267-4873-b56c-30ed5007c00c)
+archetype (adl_version=1.4; uid=d8ac401c-6267-4873-b56c-30ed5007c00c)
 	openEHR-EHR-CLUSTER.medication_order_summary.v0
 
 concept
-	[at0000]	-- Medication order summary
+	[at0000]
+
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -16,30 +17,28 @@ language
 			accreditation = <"MD, Phd">
 		>
 	>
+
 description
 	original_author = <
+		["date"] = <"2015-11-01">
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"ian@freshehr.com">
-		["date"] = <"2015-11-01">
 	>
+	lifecycle_state = <"in_development">
 	details = <
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Para fornecer um resumo geral do status e datas-chave de uma prescrição.">
 			use = <"Utilizar no contexto de uma INSTRUCTION de medicamentos, onde é necessário um resumo do esquema medicamentoso. Normalmente ocorre onde a prescrição está sendo utilizada, no contexto de oferecer uma lista de resumo do esquema medicamentoso. Não se aplica no registro de uma prescrição.">
-			misuse = <"">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To provide an overall summary of the status and key dates, related to a medication order.">
-			use = <"Use within the context of a medication order instruction where a summary of the overall order is required. This will normally be where the order is is being used within the context of a medicaton summary list, and not in the context of an orderable prescription record, where medication ctions will normally carry the primary record of the status of the order and key date information.">
-			misuse = <"">
 			copyright = <"© openEHR Foundation">
+			use = <"Use within the context of a medication order instruction where a summary of the overall order is required. This will normally be where the order is is being used within the context of a medicaton summary list, and not in the context of an orderable prescription record, where medication ctions will normally carry the primary record of the status of the order and key date information.">
 		>
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -57,47 +56,47 @@ Medication order status valueset[Internet]. HL7 FHIR , HL7 FHIR DSTU2 [cited: 20
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Medication order summary
+	CLUSTER[at0000] matches {    -- Medication order summary
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Order status
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Order status
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0021, 	-- Active
-							at0022, 	-- Stopped
-							at0023, 	-- Never active
-							at0024, 	-- Completed
-							at0025, 	-- Obsolete
-							at0026, 	-- Suspended
-							at0027]	-- Draft
+							at0021,    -- Active
+							at0022,    -- Stopped
+							at0023,    -- Never active
+							at0024,    -- Completed
+							at0025,    -- Obsolete
+							at0026,    -- Suspended
+							at0027]    -- Draft
 						}
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..*} matches {	-- Key order dates
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Key order dates
 				name matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0003, 	-- Date ordered/recommended
-							at0004, 	-- Date first prescription issued
-							at0005, 	-- Date last prescription issued
-							at0006, 	-- Date first authorised
-							at0007, 	-- Date last authorised
-							at0008, 	-- Date first dispensed
-							at0009, 	-- Date last dispensed
-							at0010, 	-- Date first administered
-							at0011, 	-- Date last administered
-							at0012, 	-- Date discontinued
-							at0013, 	-- Date authorised
-							at0014, 	-- Date prescription issued
-							at0015, 	-- Date dispensed
-							at0016, 	-- Date administered
-							at0017, 	-- Date administration withheld
-							at0018, 	-- Date reviewed
-							at0019, 	-- Date last reviewed
-							at0020]	-- Date changed
+							at0003,    -- Date ordered/recommended
+							at0004,    -- Date first prescription issued
+							at0005,    -- Date last prescription issued
+							at0006,    -- Date first authorised
+							at0007,    -- Date last authorised
+							at0008,    -- Date first dispensed
+							at0009,    -- Date last dispensed
+							at0010,    -- Date first administered
+							at0011,    -- Date last administered
+							at0012,    -- Date discontinued
+							at0013,    -- Date authorised
+							at0014,    -- Date prescription issued
+							at0015,    -- Date dispensed
+							at0016,    -- Date administered
+							at0017,    -- Date administration withheld
+							at0018,    -- Date reviewed
+							at0019,    -- Date last reviewed
+							at0020]    -- Date changed
 						}
 					}
 				}
@@ -105,15 +104,13 @@ definition
 					DV_DATE_TIME matches {*}
 				}
 			}
-			ELEMENT[at0028] occurrences matches {0..1} matches {	-- Date reported
+			ELEMENT[at0028] occurrences matches {0..1} matches {    -- Date reported
 				value matches {
 					DV_DATE_TIME matches {*}
 				}
 			}
 		}
 	}
-
-
 
 ontology
 	term_definitions = <
